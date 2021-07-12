@@ -13,6 +13,7 @@ set noshowmode
 set colorcolumn=127
 set scrolloff=5
 set relativenumber
+set shortmess+=c
 
 " autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 softtabstop=4 expandtab
