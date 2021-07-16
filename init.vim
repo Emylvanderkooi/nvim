@@ -16,19 +16,25 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'arcticicestudio/nord-vim'
 
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Language server stuff
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'L3MON4D3/LuaSnip'
+Plug 'davidhalter/jedi-vim'
 
 " A light and configurable statusline/tabline plugin for Vim
 Plug 'itchyny/lightline.vim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Lightspeed
+Plug 'ggandor/lightspeed.nvim'
 
 call plug#end()
 
@@ -39,6 +45,8 @@ source ~/.config/nvim/plug-config/lsp-config.vim
 luafile ~/.config/nvim/lua/plugins/treesitter-config.lua
 luafile ~/.config/nvim/lua/plugins/compe-config.lua
 luafile ~/.config/nvim/lua/plugins/lsp-config.lua
+luafile ~/.config/nvim/lua/plugins/telescope-config.lua
+
 
 " REMAPS
 source ~/.config/nvim/plug-config/remaps.vim

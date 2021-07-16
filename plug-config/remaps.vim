@@ -1,8 +1,11 @@
 let mapleader = " "                                                                                                                                                                         
+let g:jedi#goto_command = "<leader>gd"
 
 nnoremap <Space> <NOP>
 
-nnoremap <Leader>pf :Files<CR>
+nnoremap <leader>pf <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>pb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>

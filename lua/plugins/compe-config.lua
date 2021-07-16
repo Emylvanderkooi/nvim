@@ -2,7 +2,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Enable the following language servers
-local servers = { 'pyright', 'tsserver', 'html' }
+local servers = { 'pyright', 'tsserver', 'cssls'}
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
     -- You will probably want to add a custom on_attach here to locally map keybinds to buffers with an active client
@@ -10,6 +10,11 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+require'lspconfig'.html.setup {
+	capabilities = capabilities,
+	filetypes = { 'html', 'htmldjango'}
+}
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
