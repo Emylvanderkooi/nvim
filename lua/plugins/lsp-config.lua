@@ -5,3 +5,4 @@ require"lspconfig".pylsp.setup {
 	formatCommand = {"black"}
     }
 }
+require'lspconfig'.svelte.setup{}
