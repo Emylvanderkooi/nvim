@@ -17,4 +17,5 @@ set shortmess+=c
 
 " autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType svelte setlocal shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType html setlocal tabstop=8 noexpandtab

@@ -3,16 +3,17 @@ let g:jedi#goto_command = "<leader>gd"
 
 nnoremap <Space> <NOP>
 
-nnoremap <leader>pf <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>pb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>rg :Rg<CR>
+nnoremap <Leader>pb :Buffers<CR>
+nnoremap <leader>fe :NvimTreeToggle<CR>
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 vnoremap C "+y<CR>
-nnoremap P "+p<CR>
 nnoremap <leader>pl "0p<CR>
 
 nnoremap <leader>tab :set noexpandtab <bar> :retab!<CR>
